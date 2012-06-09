@@ -1,0 +1,15 @@
+xtitle()
+{
+    printf "\033]0;$*\007"
+}
+
+restore_default_xterm_title()
+{
+
+    _hostname=`hostname -s | tr '[a-z]' '[A-Z]'`
+    _logname=`whoami | tr '[a-z]' '[A-Z]'`
+    #_tty=`tty | sed -e 's#^/dev/##'`
+    _uname=`uname | tr '[A-Z]' '[a-z]'`
+    xtitle "${0##*/}: $_logname@$_hostname ($_uname)"
+    unset _shell _hostname _logname _tty _uname
+}                  

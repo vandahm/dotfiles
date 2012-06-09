@@ -1,0 +1,19 @@
+[user]
+    name = Stephen Van Dahm
+    email = code@vandahm.com
+
+[core]
+    quotepath = false
+    excludesfile=~/.gitignore_global
+
+[color]
+    ui = true
+
+[alias]
+    ci = commit
+    st = status
+    glog = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+
+[http]
+    sslverify = false
