@@ -53,8 +53,8 @@ restore_default_xterm_title()
 }
 
 # Vim isn't always installed, but vi should exist everywhere.
-if [ -x /usr/bin/vim ]; then
-    export EDITOR=/usr/bin/vim
+if which vim 2>&1 1>/dev/null; then
+    export EDITOR=`which vim`
 else
     export EDITOR=`which vi`
 fi
