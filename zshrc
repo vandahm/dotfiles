@@ -83,6 +83,7 @@ if [ `uname` = Darwin ] && [ -x /usr/local/bin/brew ]; then
     remove_from_path /usr/local/bin
     remove_from_path /usr/local/sbin
     prepend_to_path /usr/local/sbin
+    prepend_to_path /usr/local/bin
     prepend_to_path /usr/local/share/python
     export NODE_PATH=/usr/local/lib/node_modules
 fi
