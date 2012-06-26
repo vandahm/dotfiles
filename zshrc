@@ -7,6 +7,13 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# Don't write my history to disk
+SAVEHIST=0
+
+# Also, don't share history between processes
+unset SHARE_HISTORY
+
+
 # CONVENIENT SHELL FUNCTIONS
 source_if_exists()
 {
