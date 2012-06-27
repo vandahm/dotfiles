@@ -9,6 +9,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Don't write my history to disk
 SAVEHIST=0
+unset HISTFILE
 
 # Also, don't share history between processes
 unset SHARE_HISTORY
