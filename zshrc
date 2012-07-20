@@ -3,7 +3,11 @@
 ZSH=${HOME}/.dotfiles/oh-my-zsh
 ZSH_THEME="gentoo"
 DISABLE_AUTO_UPDATE="true"
-plugins=(git)
+
+plugins=(git rbenv)
+if [ `uname` = Darwin ]; then
+    plugins[3]="osx"
+fi
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +111,9 @@ prepend_to_path ${HOME}/bin               # Regular Unix
 if [ -d ${HOME}/.rbenv ]; then
     prepend_to_path ${HOME}/.rbenv/bin
     eval "$(rbenv init -)"
+    # Clean up PATH
+    remove_from_path ${HOME}/.rbenv/shims
+    prepend_to_path ${HOME}/.rbenv/shims
 fi
 
 # Prevent jackasses on multiuser systems from catting /dev/urandom to my TTY
