@@ -11,6 +11,9 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+# Autocorrect: theoretically useful, but annoying in practice.
+unsetopt correct_all
+
 # Don't write my history to disk
 SAVEHIST=0
 unset HISTFILE
