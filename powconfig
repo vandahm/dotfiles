@@ -1,0 +1,2 @@
+export HOME=/Users/stephen
+export PATH="/Users/stephen/.rbenv/shims:/Users/stephen/.rbenv/bin:$PATH"
