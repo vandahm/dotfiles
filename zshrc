@@ -120,7 +120,9 @@ if [ -d ${HOME}/.rbenv ]; then
 fi
 
 # Prevent jackasses on multiuser systems from catting /dev/urandom to my TTY
-mesg n
+if [ -O $TTY ]; then
+    mesg n
+fi
 
 # Perform any machine-specific config tasks
 source_if_exists ${HOME}/.zshrc-local
