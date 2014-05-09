@@ -103,6 +103,12 @@ if [ `uname` = Darwin ] && [ -x /usr/local/bin/brew ]; then
     export NODE_PATH=/usr/local/lib/node_modules
 fi
 
+# Haxe on Macs (for game development)
+if [ -d /usr/local/lib/haxe/std ]; then
+    HAXE_STD_PATH="/usr/local/lib/haxe/std"
+    export HAXE_STD_PATH
+fi
+
 # TeX on Macs
 prepend_to_path /usr/local/texlive/2011/bin/x86_64-darwin
 
