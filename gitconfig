@@ -20,3 +20,5 @@
     sslverify = false
 [push]
 	default = simple
+[github]
+	user = code@vandahm.com
