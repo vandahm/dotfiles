@@ -21,4 +21,5 @@
 [push]
 	default = simple
 [github]
-	user = code@vandahm.com
+    user = code@vandahm.com
+

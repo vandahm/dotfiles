@@ -124,6 +124,17 @@ if [ -d ${HOME}/.rbenv ]; then
     remove_from_path ${HOME}/.rbenv/shims
     prepend_to_path ${HOME}/.rbenv/shims
 fi
+editors=(
+    $VISUAL
+    atom
+    subl
+)
+for editor in $editors; do
+    if command -v $editor 2>&1 1>/dev/null; then
+        export BUNDLER_EDITOR=$editor
+    fi
+done
+unset $editors;
 
 # Prevent jackasses on multiuser systems from catting /dev/urandom to my TTY
 if [ -O $TTY ]; then
