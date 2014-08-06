@@ -7,9 +7,9 @@ set modelines=0
 
 colorscheme elflord
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 set encoding=utf-8
@@ -27,7 +27,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 "set relativenumber "Requires Vim 7.3
-"set undofile       "Requires Vim 7.3
+set undofile       "Requires Vim 7.3
 
 "nnoremap / /\v
 "vnoremap / /\v
@@ -44,7 +44,6 @@ vnoremap <tab> %
 
 " set wrap
 " set textwidth=
-
 
 autocmd BufEnter *.phtml set syn=php
 syntax on
