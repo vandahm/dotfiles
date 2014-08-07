@@ -5,7 +5,9 @@ filetype plugin indent on
 set nocompatible
 set modelines=0
 
-colorscheme elflord
+syntax enable
+set background=dark
+colorscheme solarized
 
 set tabstop=2
 set shiftwidth=2
