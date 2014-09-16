@@ -4,7 +4,7 @@ ZSH=${HOME}/.dotfiles/oh-my-zsh
 ZSH_THEME="pygmalion"
 DISABLE_AUTO_UPDATE="true"
 
-plugins=(git rbenv)
+plugins=(git)
 if [ `uname` = Darwin ]; then
     plugins[3]="osx"
 fi
@@ -101,6 +101,10 @@ if [ `uname` = Darwin ] && [ -x /usr/local/bin/brew ]; then
     prepend_to_path /usr/local/bin
     prepend_to_path /usr/local/share/npm/bin
     export NODE_PATH=/usr/local/lib/node_modules
+
+    if brew list | grep rbenv > /dev/null; then
+        export RBENV_ROOT=/usr/local/var/rbenv
+    fi
 fi
 
 # Haxe on Macs (for game development)
@@ -117,13 +121,11 @@ prepend_to_path ${HOME}/Library/UnixUtils # OS X
 prepend_to_path ${HOME}/bin               # Regular Unix
 
 # Ruby Stuff
-if [ -d ${HOME}/.rbenv ]; then
-    prepend_to_path ${HOME}/.rbenv/bin
-    eval "$(rbenv init -)"
-    # Clean up PATH
-    remove_from_path ${HOME}/.rbenv/shims
-    prepend_to_path ${HOME}/.rbenv/shims
+prepend_to_path ${HOME}/.rbenv/bin
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
 fi
+
 editors=(
     $VISUAL
     atom
@@ -134,7 +136,7 @@ for editor in $editors; do
         export BUNDLER_EDITOR=$editor
     fi
 done
-unset $editors;
+unset editors;
 
 # Prevent jackasses on multiuser systems from catting /dev/urandom to my TTY
 if [ -O $TTY ]; then
@@ -146,3 +148,6 @@ source_if_exists ${HOME}/.zshrc-local
 
 # Set xterm window title, if appropriate.
 restore_default_xterm_title
+
+# added by travis gem
+[ -f /Users/stephenvandahm/.travis/travis.sh ] && source /Users/stephenvandahm/.travis/travis.sh
