@@ -29,7 +29,7 @@ set ruler
 set backspace=indent,eol,start
 set laststatus=2
 "set relativenumber "Requires Vim 7.3
-set undofile       "Requires Vim 7.3
+"set undofile       "Requires Vim 7.3
 
 "nnoremap / /\v
 "vnoremap / /\v

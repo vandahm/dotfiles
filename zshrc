@@ -6,10 +6,11 @@ DISABLE_AUTO_UPDATE="true"
 
 plugins=(git)
 if [ `uname` = Darwin ]; then
-    plugins[3]="osx"
+    plugins[2]="osx"
 fi
 
 source $ZSH/oh-my-zsh.sh
+unset plugins
 
 # Autocorrect: theoretically useful, but annoying in practice.
 unsetopt correct_all
@@ -128,8 +129,8 @@ fi
 
 editors=(
     $VISUAL
-    atom
     subl
+    atom
 )
 for editor in $editors; do
     if command -v $editor 2>&1 1>/dev/null; then
