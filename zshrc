@@ -150,5 +150,8 @@ source_if_exists ${HOME}/.zshrc-local
 # Set xterm window title, if appropriate.
 restore_default_xterm_title
 
-# added by travis gem
-[ -f /Users/stephenvandahm/.travis/travis.sh ] && source /Users/stephenvandahm/.travis/travis.sh
+# Travis
+source_if_exists ${HOME}/.travis/travis.sh
+
+#iTerm Shell integration on Macs
+source_if_exists ${HOME}/.iterm2_shell_integration.zsh
