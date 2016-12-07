@@ -106,6 +106,10 @@ if [ `uname` = Darwin ] && [ -x /usr/local/bin/brew ]; then
     if brew list | grep rbenv > /dev/null; then
         export RBENV_ROOT=/usr/local/var/rbenv
     fi
+
+    if brew list | grep pyenv > /dev/null; then
+      export PYENV_ROOT=/usr/local/var/pyenv
+    fi
 fi
 
 # Haxe on Macs (for game development)
@@ -124,7 +128,12 @@ prepend_to_path ${HOME}/bin               # Regular Unix
 # Ruby Stuff
 prepend_to_path ${HOME}/.rbenv/bin
 if which rbenv > /dev/null; then
-  eval "$(rbenv init -)";
+  eval "$(rbenv init -)"
+fi
+
+# Python Stuff
+if which pyenv > /dev/null; then
+  eval "$(pyenv init -)"
 fi
 
 editors=(
@@ -135,6 +144,7 @@ editors=(
 for editor in $editors; do
     if command -v $editor 2>&1 1>/dev/null; then
         export BUNDLER_EDITOR=$editor
+        export GEM_EDITOR=$editor
     fi
 done
 unset editors;
