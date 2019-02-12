@@ -1,0 +1,12 @@
+host = 			/home/user/.config/mpd/socket
+enable-mouse =		no
+welcome-screen-list = 	yes
+list-format = 		"%file%"
+enable-colors =		yes
+color background =	none
+color title =		cyan
+color line =		blue
+color line-flags =	cyan
+color list =		white
+color status-song =	cyan
+	

@@ -8,6 +8,7 @@ set modelines=0
 syntax enable
 set background=dark
 colorscheme solarized
+"colorscheme molokai
 
 set tabstop=2
 set shiftwidth=2

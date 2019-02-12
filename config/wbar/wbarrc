@@ -1,0 +1,27 @@
+i: /usr/local/share/pixmaps/wbar/osx_bar_dock.png
+c: wbar --bpress --pos bottom --offset 12 --zoomf 1.8 --isize 48 --idist 10 --jumpf 1 --nanim 3 --balfa 100
+t: /usr/local/share/fonts/cantarell/Cantarell-Bold.otf/12
+
+i: /usr/local/share/pixmaps/firefox-esr.png
+c: firefox-esr
+t: WebBrowser
+
+i: /usr/local/share/pixmaps/sylpheed.png
+c: sylpheed
+t: Email
+
+i: /usr/local/share/pixmaps/terminal.png
+c: xterm
+t: Terminal
+
+i: /usr/local/share/pixmaps/file-manager.png
+c: pcmanfm
+t: FileManager
+
+i: /usr/local/share/icons/hicolor/48x48/apps/libreoffice-main.png
+c: soffice
+t: LibreOffice
+
+i: /usr/local/share/pixmaps/music.png
+c: gimmix
+t: Music

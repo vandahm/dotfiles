@@ -1,0 +1,254 @@
+#define S_base03        #002b36
+#define S_base02        #073642
+#define S_base01        #586e75
+#define S_base00        #657b83
+#define S_base0         #839496
+#define S_base1         #93a1a1
+#define S_base2         #eee8d5
+#define S_base3         #fdf6e3
+
+*background:            S_base03
+*foreground:            S_base0
+*fadeColor:             S_base03
+*cursorColor:           S_base1
+*pointerColorBackground:S_base01
+*pointerColorForeground:S_base1
+
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
+#define S_red           #dc322f
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
+
+!! black dark/light
+*color0:                S_base02
+*color8:                S_base03
+
+!! red dark/light
+*color1:                S_red
+*color9:                S_orange
+
+!! green dark/light
+*color2:                S_green
+*color10:               S_base01
+
+!! yellow dark/light
+*color3:                S_yellow
+*color11:               S_base00
+
+!! blue dark/light
+*color4:                S_blue
+*color12:               S_base0
+
+!! magenta dark/light
+*color5:                S_magenta
+*color13:               S_violet
+
+!! cyan dark/light
+*color6:                S_cyan
+*color14:               S_base1
+
+!! white dark/light
+*color7:                S_base2
+*color15:               S_base3
+Xft.autohint  : 0
+Xft.lcdfilter : lcddefault
+Xft.hintstyle : hintslight
+Xft.hinting   : 1
+Xft.antialias : 1
+Xft.rgba      : rgb
+
+x! *font         : -misc-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-iso10646-1
+*font         : xft:Source COde Pro:size=12:antialias=true:hinting=true
+
+
+! ===== xlock =====
+
+! turns off backlight
+XLock.dpmsoff     : 1
+
+! simple white-on-black lock screen
+XLock.description : off
+XLock.echokeys    : off
+XLock.info        :
+XLock.background  : black
+XLock.foreground  : white
+XLock.mode        : blank
+XLock.username    : username:
+XLock.password    : password:
+XLock.font        : -misc-fixed-medium-r-normal-*-15-*-*-*-*-*-iso10646-1
+XLock.planfont    : -misc-fixed-medium-r-normal-*-13-*-*-*-*-*-iso10646-1
+
+! ===== rofi =====
+
+rofi.separator-style : solid
+rofi.font            : Terminus (TTF) 9
+rofi.lines           : 10
+rofi.width           : 800
+
+! ===== xterm =====
+
+XTerm*background: #002b36
+XTerm*foreground: #93a1a1
+XTerm*scrollBar: true
+XTerm*rightScrollBar: true
+XTerm*multiScroll: on
+XTerm*jumpScroll: on
+XTerm*locale: true
+! XTerm*faceName: Bitstream Vera Sans Mono
+XTerm*faceName: Adobe Source Code Pro
+XTerm*faceSize: 10
+XTerm*eightBitInput: true
+XTerm*pointerShape: left_ptr
+XTerm*showBlinkAsBold: true
+XTerm*colorBDMode: true
+XTerm*ActiveIcon: true
+XTerm*scrollbar.foreground: #2A3144
+XTerm*scrollbar.background: #5D5D67
+XTerm*scrollbar.thumb: black
+XTerm*VT100.scrollbar.translations:  #override \n\
+        <Btn5Down>:     StartScroll(Forward) \n\
+        <Btn1Down>:     StartScroll(Continuous) MoveThumb() NotifyThumb() \n\
+        <Btn4Down>:     StartScroll(Backward) \n\
+        <Btn1Motion>:   MoveThumb() NotifyThumb() \n\
+        <BtnUp>:        NotifyScroll(Proportional) EndScroll()
+XTerm*VT100.color1: #2F4F4F
+
+! XCalc
+XCalc*geometry:                        200x275
+XCalc.ti.bevel.background:             #111111
+XCalc.ti.bevel.screen.background:      #000000
+XCalc.ti.bevel.screen.DEG.background:  #000000
+XCalc.ti.bevel.screen.DEG.foreground:  LightSeaGreen
+XCalc.ti.bevel.screen.GRAD.background: #000000
+XCalc.ti.bevel.screen.GRAD.foreground: LightSeaGreen
+XCalc.ti.bevel.screen.RAD.background:  #000000
+XCalc.ti.bevel.screen.RAD.foreground:  LightSeaGreen
+XCalc.ti.bevel.screen.INV.background:  #000000
+XCalc.ti.bevel.screen.INV.foreground:  Red
+XCalc.ti.bevel.screen.LCD.background:  #000000
+XCalc.ti.bevel.screen.LCD.foreground:  LightSeaGreen
+XCalc.ti.bevel.screen.LCD.shadowWidth: 0
+XCalc.ti.bevel.screen.M.background:    #000000
+XCalc.ti.bevel.screen.M.foreground:    LightSeaGreen
+XCalc.ti.bevel.screen.P.background:    #000000
+XCalc.ti.bevel.screen.P.foreground:    Yellow
+XCalc.ti.Command.foreground:  White
+XCalc.ti.Command.background:  #777777
+XCalc.ti.button5.background:  Orange3
+XCalc.ti.button19.background: #611161
+XCalc.ti.button18.background: #611161
+XCalc.ti.button20.background: #611111
+!uncomment to change label on division button
+!XCalc.ti.button20.label:      /
+XCalc.ti.button25.label:        x
+XCalc.ti.button25.background: #722222
+XCalc.ti.button30.background: #833333
+XCalc.ti.button35.background: #944444
+XCalc.ti.button40.background: #a55555
+XCalc.ti.button22.background: #222262
+XCalc.ti.button23.background: #222262
+XCalc.ti.button24.background: #222272
+XCalc.ti.button27.background: #333373
+XCalc.ti.button28.background: #333373
+XCalc.ti.button29.background: #333373
+XCalc.ti.button32.background: #444484
+XCalc.ti.button33.background: #444484
+XCalc.ti.button34.background: #444484
+XCalc.ti.button37.background: #555595
+XCalc.ti.button38.background: #555595
+XCalc.ti.button39.background: #555595
+XCalc*Cursor:                 hand2
+XCalc*ShapeStyle:             rectangle
+!XClipboard
+XClipboard.background:       darkgrey
+XClipboard.foreground:       white
+XClipboard.geometry:         800x80
+!-------------------------------------------------------------------------------
+! URxvt settings
+! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
+! More info at:
+! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
+!-------------------------------------------------------------------------------
+
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+! URxvt.urgentOnBell:         true
+! URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            50
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+! Fonts
+URxvt.allow_bold:           false
+/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+!URxvt*font: xft:Monospace:pixelsize=14
+!URxvt*boldFont: xft:Monospace:pixelsize=14
+
+! Fix font space
+URxvt*letterSpace: -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          firefox
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+!!Source http://github.com/altercation/solarized
+
+*background: #002b36
+*foreground: #657b83
+!!*fading: 40
+*fadeColor: #002b36
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+
+!! black dark/light
+*color0: #073642
+*color8: #002b36
+
+!! red dark/light
+*color1: #dc322f
+*color9: #cb4b16
+
+!! green dark/light
+*color2: #859900
+*color10: #586e75
+
+!! yellow dark/light
+*color3: #b58900
+*color11: #657b83
+
+!! blue dark/light
+*color4: #268bd2
+*color12: #839496
+
+!! magenta dark/light
+*color5: #d33682
+*color13: #6c71c4
+
+!! cyan dark/light
+*color6: #2aa198
+*color14: #93a1a1
+
+!! white dark/light
+*color7: #eee8d5
+*color15: #fdf6e3
