@@ -1,7 +1,7 @@
 #!/bin/zsh
 alias hedwig='ssh stephen@hedwig.vandahm.com; restore_default_xterm_title'
 alias crookshanks='ssh stephen@crookshanks.vandahm.com; restore_default_xterm_title'
-alias sdf='ssh vandahm@sverige.freeshell.org; restore_default_xterm_title'
+alias sdf='ssh vandahm@sdf.org; restore_default_xterm_title'
 
 # Make regular Unix act like it has OS X's open(1)
 if which gnome-open 2>/dev/null 1>/dev/null; then

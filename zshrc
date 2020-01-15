@@ -68,14 +68,6 @@ restore_default_xterm_title()
     return
 }
 
-# Vim isn't always installed, but vi should exist everywhere.
-if which vim 2>&1 1>/dev/null; then
-    export EDITOR=`which vim`
-else
-    export EDITOR=`which vi`
-fi
-export VISUAL=$EDITOR
-
 if [ "$COLORTERM" = 'gnome-terminal' ]; then
     TERM=xterm-color
     export TERM
@@ -111,6 +103,18 @@ if [ `uname` = Darwin ] && [ -x /usr/local/bin/brew ]; then
       export PYENV_ROOT=/usr/local/var/pyenv
     fi
 fi
+
+# Vim isn't always installed, but vi should exist everywhere.
+if which vim 2>&1 1>/dev/null; then
+    export EDITOR=`which vim`
+else
+    export EDITOR=`which vi`
+fi
+export VISUAL=$EDITOR
+
+# Go on OS X and OpenBSD
+prepend_to_path /usr/local/opt/go/libexec/bin
+prepend_to_path /usr/local/go/bin
 
 # Haxe on Macs (for game development)
 if [ -d /usr/local/lib/haxe/std ]; then
