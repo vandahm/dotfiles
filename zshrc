@@ -95,11 +95,11 @@ if [ `uname` = Darwin ] && [ -x /usr/local/bin/brew ]; then
     prepend_to_path /usr/local/share/npm/bin
     export NODE_PATH=/usr/local/lib/node_modules
 
-    if brew list | grep rbenv > /dev/null; then
+    if brew list --formula | grep rbenv > /dev/null; then
         export RBENV_ROOT=/usr/local/var/rbenv
     fi
 
-    if brew list | grep pyenv > /dev/null; then
+    if brew list --formula | grep pyenv > /dev/null; then
       export PYENV_ROOT=/usr/local/var/pyenv
     fi
 fi
@@ -138,6 +138,7 @@ fi
 # Python Stuff
 if which pyenv > /dev/null; then
   eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
 fi
 
 editors=(
@@ -169,3 +170,7 @@ source_if_exists ${HOME}/.travis/travis.sh
 
 #iTerm Shell integration on Macs
 source_if_exists ${HOME}/.iterm2_shell_integration.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/stephen/.sdkman"
+[[ -s "/Users/stephen/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/stephen/.sdkman/bin/sdkman-init.sh"
